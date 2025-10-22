@@ -68,17 +68,18 @@ O código também pode conter trechos faltantes com instruções como:
 
 1. **Crie um Dockerfile para o backend (`server/`)**
 
-   * Base: `python:3.10`
+   * Base (exemplo): `python:3.10-slim`
    * Instale dependências do `requirements.txt`
    * Exponha a porta usada (por exemplo, `8000`)
    * Execute a aplicação (ex: `uvicorn app:app --host 0.0.0.0 --port 8000`)
 
 2. **Crie um Dockerfile para o frontend (`web/`)**
 
-   * Base: `node:18`
-   * Instale dependências via `npm install`
+   * Base (exemplo): `python:3.10-slim`
+   * Instale dependências do `requirements.txt`
    * Exponha a porta usada (por exemplo, `3000`)
    * Execute o servidor (ex: `npm start`)
+   * Execute a aplicação (ex: `streamlit run app.py`)
 
 3. **Monte o `docker-compose.yml`**
 
